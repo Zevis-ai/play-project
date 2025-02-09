@@ -2,12 +2,16 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background-image: url(../images/bg_6.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     direction: rtl;
-    color: white;
+    color: black;
 }
 
 .game-container {
@@ -26,10 +30,38 @@ header {
 }
 
 h1 {
-    color: white;
-    font-size: 2.5rem;
-    margin: 0 0 1.5rem 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    
+        
+        font-size: 4.5rem;
+        font-family: "Rubik Moonrocks", serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        padding: 1rem 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        background-image: linear-gradient(
+            90deg,
+            #ff0000 0%,
+            #ff8000 14%,
+            #ffff00 28%,
+            #00ff00 42%,
+            #0400ff 56%,
+            #0000ff 70%,
+            #8000ff 84%,
+            #ff0000 100%
+        );
+        background-size: 200% auto;
+        animation: rainbow 5s linear infinite;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    
 }
 
 .score-board {
@@ -81,7 +113,7 @@ h1 {
     padding: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: white;
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;

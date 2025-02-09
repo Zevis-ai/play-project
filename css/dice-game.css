@@ -1,16 +1,20 @@
-/* כללי */
 body {
-    direction: rtl;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../images/bg_6.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-    color: white;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    direction: rtl;
+    padding: 2rem 1rem;
 }
-
 .container {
     width: 90%;
     max-width: 800px;
@@ -24,9 +28,36 @@ header {
 }
 
 h1 {
-    color: #4CAF50;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 4.5rem;
+    font-family: "Rubik Moonrocks", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background-image: linear-gradient(
+        90deg,
+        #ff0000 0%,
+        #ff8000 14%,
+        #ffff00 28%,
+        #00ff00 42%,
+        #0400ff 56%,
+        #0000ff 70%,
+        #8000ff 84%,
+        #ff0000 100%
+    );
+    background-size: 200% auto;
+    animation: rainbow 5s linear infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .score-container {
@@ -34,6 +65,13 @@ h1 {
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 .score-box {
@@ -50,10 +88,14 @@ h1 {
 
 /* אזור המשחק */
 .game-area {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    
 }
 
 /* קוביות */
