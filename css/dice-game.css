@@ -1,0 +1,170 @@
+/* כללי */
+body {
+    direction: rtl;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* כותרת וניקוד */
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #4CAF50;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.score-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.score-box {
+    background: rgba(76, 175, 80, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 2px solid #4CAF50;
+}
+
+.score-box span {
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+}
+
+/* אזור המשחק */
+.game-area {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* קוביות */
+.dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.dice-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dice {
+    font-size: 5rem;
+    width: 100px;
+    height: 100px;
+    background: white;
+    color: #1a1a1a;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.dice.rolling {
+    animation: roll 0.5s ease;
+}
+
+@keyframes roll {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* תוצאות */
+.result-container {
+    margin: 2rem 0;
+}
+
+.sum-box {
+    background: rgba(76, 175, 80, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 2px solid #4CAF50;
+    display: inline-block;
+    margin: 1rem;
+}
+
+.sum-box span {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+/* כפתורים */
+.game-modes {
+    margin: 2rem 0;
+}
+
+.control-button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.control-button:hover {
+    background: #45a049;
+}
+
+.control-button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+/* אזור המחשב */
+.computer-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+.computer-section.hidden {
+    display: none;
+}
+
+/* הודעות */
+.message {
+    margin-top: 1.5rem;
+    min-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.win {
+    color: #4CAF50;
+}
+
+.lose {
+    color: #f44336;
+}
+
+.tie {
+    color: #FFC107;
+}

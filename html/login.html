@@ -4,25 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>התחברות</title>
+    <title>כניסה</title>
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
     <div class="container">
-        <h1>התחברות</h1>
-        <form action="/login" method="post">
+        <h1>כניסה</h1>
+        <form onsubmit="login(event)">
             <label for="username">שם משתמש</label>
             <input type="text" id="username" placeholder="שם משתמש" required>
-
-            <label for="email">אימייל</label>
-            <input type="email" id="email" placeholder="אימייל" required>
 
             <label for="password">סיסמה</label>
             <input type="password" id="password" placeholder="סיסמה" required>
 
             <button type="submit">התחבר</button>
         </form>
-        <button onclick="window.location.href='sign-up.html'">אין לך חשבון? הירשם</button>
+        <button onclick="window.location.href='sign-up.html'">אין לך חשבון? לחץ כאן</button>
     </div>
+    <script src="../js/auth.js"></script>
 </body>
 </html>

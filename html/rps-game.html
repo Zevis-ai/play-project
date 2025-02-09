@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אבן נייר ומספריים</title>
+    <link rel="stylesheet" href="../css/rps-game.css">
+    <script src="../js/auth.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>אבן נייר ומספריים</h1>
+            <div class="score-board">
+                <div class="score-box player">
+                    <span class="label">שחקן</span>
+                    <span id="playerScore">0</span>
+                </div>
+                <div class="score-box high-score">
+                    <span class="label">שיא</span>
+                    <span id="highScore">0</span>
+                </div>
+                <div class="score-box computer">
+                    <span class="label">מחשב</span>
+                    <span id="computerScore">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-area">
+            <div class="choices">
+                <button class="choice" data-choice="אבן">
+                    <img src="../images/אבן.jpeg" alt="אבן">
+                    <span>אבן</span>
+                </button>
+                <button class="choice" data-choice="נייר">
+                    <img src="../images/נייר.jpeg" alt="נייר">
+                    <span>נייר</span>
+                </button>
+                <button class="choice" data-choice="מספריים">
+                    <img src="../images/מספריים.jpeg" alt="מספריים">
+                    <span>מספריים</span>
+                </button>
+            </div>
+
+            <div class="result-area">
+                <div class="game-hands">
+                    <div class="hand player-hand">
+                        <img src="../images/אבן.jpeg" alt="יד השחקן">
+                        <span class="hand-label">הבחירה שלך</span>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="hand computer-hand">
+                        <img src="../images/מספריים.jpeg" alt="יד המחשב">
+                        <span class="hand-label">בחירת המחשב</span>
+                    </div>
+                </div>
+                <div id="result" class="result">בחר את המהלך שלך!</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="resetGame" class="control-button">משחק חדש</button>
+            <button onclick="window.location.href='index.html'" class="control-button">חזרה לדף הבית</button>
+        </div>
+    </div>
+    <script src="../js/rps-game.js"></script>
+</body>
+</html>

@@ -1,15 +1,57 @@
 <!doctype html>
-<html lang="en">
+<html lang="he">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>משחקים של זאבי</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/auth.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Hello World</h1>
+        <h1>ברוכים הבאים למשחקים של זאבי!</h1>
+        <div class="games-grid">
+            <div class="game-card">
+                <img src="../images/רקעניירמספריים.jpeg" alt="אבן נייר ומספריים" class="game-image">
+                <div class="game-content">
+                    <h2>אבן נייר ומספריים</h2>
+                    <p>שחק נגד המחשב במשחק הקלאסי! צבור נקודות ושבור שיאים במשחק המהנה.</p>
+                    <a href="rps-game.html" class="play-button">שחק עכשיו!</a>
+                </div>
+            </div>
+            
+            <div class="game-card">    
+                <img src="../images/מספריםרקע.webp" alt="חישוב מהיר" class="game-image">
+                <div class="game-content">
+                    <h2>חישוב מהיר</h2>
+                    <p>עקוב אחרי סדרת פעולות חשבון מהירות ונסה לחשב את התוצאה הסופית! משחק שיאתגר את המוח שלך.</p>
+                    <a href="math-sequence.html" class="play-button">שחק עכשיו!</a>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <img src="../images/הטלתקוביותרקע.webp" alt="הטלת קוביות" class="game-image">
+                <div class="game-content">
+                    <h2>הטלת קוביות</h2>
+                    <p>הטל את הקוביות ונסה להשיג את הניקוד הגבוה ביותר! משחק מזל מהנה עם אפשרות לשחק נגד המחשב.</p>
+                    <a href="dice-game.html" class="play-button">שחק עכשיו!</a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        window.onload = function() {
+            const userData = checkLoginStatus();
+            if (!userData) {
+                window.location.href = 'sing-in.html';
+            }
+        }
+    </script>
 </body>
 </html>

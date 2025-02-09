@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הטלת קוביות - משחקים של זאבי</title>
+    <link rel="stylesheet" href="../css/dice-game.css">
+    <script src="../js/auth.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>הטלת קוביות</h1>
+            <div class="score-container">
+                <div class="score-box">
+                    <span>ניקוד:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-box">
+                    <span>שיא:</span>
+                    <span id="highScore">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="dice-container">
+                <div class="dice-box">
+                    <div id="dice1" class="dice">⚀</div>
+                    <span>קובייה 1</span>
+                </div>
+                <div class="dice-box">
+                    <div id="dice2" class="dice">⚀</div>
+                    <span>קובייה 2</span>
+                </div>
+            </div>
+
+            <div class="result-container">
+                <div class="sum-box">
+                    <span>סכום:</span>
+                    <span id="diceSum">0</span>
+                </div>
+            </div>
+
+            <div class="game-modes">
+                <button id="rollDice" class="control-button">הטל קוביות</button>
+                <button id="playComputer" class="control-button">שחק נגד המחשב</button>
+                <button id="resetGame" class="control-button">איפוס משחק</button>
+            </div>
+
+            <div class="computer-section hidden" id="computerSection">
+                <h3>המחשב</h3>
+                <div class="dice-container">
+                    <div class="dice-box">
+                        <div id="computerDice1" class="dice">⚀</div>
+                        <span>קובייה 1</span>
+                    </div>
+                    <div class="dice-box">
+                        <div id="computerDice2" class="dice">⚀</div>
+                        <span>קובייה 2</span>
+                    </div>
+                </div>
+                <div class="sum-box">
+                    <span>סכום המחשב:</span>
+                    <span id="computerSum">0</span>
+                </div>
+            </div>
+
+            <div id="message" class="message"></div>
+
+            <div class="controls">
+                <a href="index.html" class="control-button">חזרה לדף הבית</a>
+            </div>
+        </main>
+    </div>
+    <script src="../js/dice-game.js"></script>
+</body>
+</html>

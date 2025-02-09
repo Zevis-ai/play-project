@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חישוב מהיר - משחקים של זאבי</title>
+    <link rel="stylesheet" href="../css/math-sequence.css">
+    <script src="../js/auth.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>חישוב מהיר</h1>
+            <div class="score-container">
+                <div class="score-box">
+                    <span>ניקוד:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-box">
+                    <span>שיא:</span>
+                    <span id="highScore">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div id="sequence-display" class="sequence-display">
+                <div id="current-number" class="current-number">0</div>
+                <div id="operation" class="operation"></div>
+            </div>
+
+            <div id="input-area" class="input-area hidden">
+                <h2>מה התוצאה הסופית?</h2>
+                <input type="number" id="answer-input" placeholder="הכנס את תשובתך">
+                <button id="submit-answer">בדוק תשובה</button>
+            </div>
+
+            <div class="controls">
+                <button id="start-game" class="control-button">התחל משחק</button>
+                <button id="reset-game" class="control-button">איפוס משחק</button>
+                <a href="index.html" class="control-button">חזרה לדף הבית</a>
+            </div>
+
+            <div id="message" class="message"></div>
+        </main>
+    </div>
+    <script src="../js/math-sequence.js"></script>
+</body>
+</html>

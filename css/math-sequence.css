@@ -1,0 +1,133 @@
+/* כללי */
+body {
+    direction: rtl;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* כותרת וניקוד */
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #4CAF50;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.score-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.score-box {
+    background: rgba(76, 175, 80, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 2px solid #4CAF50;
+}
+
+.score-box span {
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+}
+
+/* אזור המשחק */
+.game-area {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.sequence-display {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.current-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.operation {
+    font-size: 2rem;
+    color: #FFC107;
+}
+
+.input-area {
+    margin: 2rem 0;
+}
+
+.input-area.hidden {
+    display: none;
+}
+
+input[type="number"] {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    margin: 1rem;
+    text-align: center;
+}
+
+/* כפתורים */
+.control-button, #submit-answer {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.control-button:hover, #submit-answer:hover {
+    background: #45a049;
+}
+
+.controls {
+    margin-top: 2rem;
+}
+
+/* הודעות */
+.message {
+    margin-top: 1.5rem;
+    min-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.correct {
+    color: #4CAF50;
+}
+
+.incorrect {
+    color: #f44336;
+}
