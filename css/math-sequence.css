@@ -150,8 +150,9 @@ input[type="number"] {
     font-size: 1.1rem;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0.5rem;
     transition: background 0.3s ease;
+    width: 200px;
+    max-width: 100%;
 }
 
 .control-button:hover, #submit-answer:hover {
@@ -160,6 +161,10 @@ input[type="number"] {
 
 .controls {
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 /* הודעות */
@@ -175,4 +180,19 @@ input[type="number"] {
 
 .incorrect {
     color: #f44336;
+}
+
+@media screen and (max-width: 480px) {
+    .control-button, #submit-answer {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
 }
