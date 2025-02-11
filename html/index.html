@@ -21,6 +21,16 @@
                 <div class="game-content">
                     <h2>אבן נייר ומספריים</h2>
                     <p>שחק נגד המחשב במשחק הקלאסי! צבור נקודות ושבור שיאים במשחק המהנה.</p>
+                    <button class="instructions-button">הוראות משחק</button>
+                    <div class="instructions-content">
+                        <h3>איך משחקים?</h3>
+                        <ul>
+                            <li>בחר אחת מהאפשרויות: אבן, נייר או מספריים</li>
+                            <li>המחשב יבחר את הבחירה שלו</li>
+                            <li>אבן מנצחת מספריים, מספריים מנצחות נייר, ונייר מנצח אבן</li>
+                            <li>צבור נקודות בכל ניצחון ונסה לשבור את השיא שלך!</li>
+                        </ul>
+                    </div>
                     <a href="rps-game.html" class="play-button">שחק עכשיו!</a>
                 </div>
             </div>
@@ -30,6 +40,16 @@
                 <div class="game-content">
                     <h2>חישוב מהיר</h2>
                     <p>עקוב אחרי סדרת פעולות חשבון מהירות ונסה לחשב את התוצאה הסופית! משחק שיאתגר את המוח שלך.</p>
+                    <button class="instructions-button">הוראות משחק</button>
+                    <div class="instructions-content">
+                        <h3>איך משחקים?</h3>
+                        <ul>
+                            <li>תוצג בפניך סדרת פעולות חשבון</li>
+                            <li>חשב את התוצאה הסופית בראש</li>
+                            <li>הכנס את התשובה שלך בזמן המוקצב</li>
+                            <li>ככל שתענה מהר יותר, כך תקבל יותר נקודות!</li>
+                        </ul>
+                    </div>
                     <a href="math-sequence.html" class="play-button">שחק עכשיו!</a>
                 </div>
             </div>
@@ -39,6 +59,16 @@
                 <div class="game-content">
                     <h2>הטלת קוביות</h2>
                     <p>הטל את הקוביות ונסה להשיג את הניקוד הגבוה ביותר! משחק מזל מהנה עם אפשרות לשחק נגד המחשב.</p>
+                    <button class="instructions-button">הוראות משחק</button>
+                    <div class="instructions-content">
+                        <h3>איך משחקים?</h3>
+                        <ul>
+                            <li>לחץ על כפתור ההטלה כדי לגלגל את הקוביות</li>
+                            <li>נסה להשיג את הסכום הגבוה ביותר</li>
+                            <li>שחק נגד המחשב וראה מי מצליח להשיג יותר נקודות</li>
+                            <li>צבור נקודות ושבור את השיא האישי שלך!</li>
+                        </ul>
+                    </div>
                     <a href="dice-game.html" class="play-button">שחק עכשיו!</a>
                 </div>
             </div>
@@ -51,6 +81,27 @@
             if (!userData) {
                 window.location.href = 'sing-in.html';
             }
+
+            // הוספת מאזיני לחיצה לכפתורי ההוראות
+            document.querySelectorAll('.instructions-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    // מציאת תוכן ההוראות הקרוב לכפתור
+                    const content = this.nextElementSibling;
+                    
+                    // סגירת כל שאר ההוראות הפתוחות
+                    document.querySelectorAll('.instructions-content.active').forEach(openContent => {
+                        if (openContent !== content) {
+                            openContent.classList.remove('active');
+                        }
+                    });
+                    
+                    // החלפת מצב התוכן הנוכחי
+                    content.classList.toggle('active');
+                    
+                    // שינוי טקסט הכפתור
+                    this.textContent = content.classList.contains('active') ? 'סגור הוראות' : 'הוראות משחק';
+                });
+            });
         }
     </script>
 </body>

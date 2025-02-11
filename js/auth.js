@@ -1,5 +1,5 @@
 
-function login(event) {
+const login =(event)=> {
     event.preventDefault();
     
     const username = document.getElementById('username').value;
@@ -34,7 +34,7 @@ function login(event) {
 }
 
 
-function signUp(event) {
+const signUp = (event) => {
     event.preventDefault();
     
     const username = document.getElementById('username').value;
@@ -76,13 +76,13 @@ function signUp(event) {
 }
 
 
-function logout() {
+const logout =()=> {
     localStorage.removeItem('userData');
     window.location.href = 'login.html';
 }
 
 
-function checkLoginStatus() {
+const checkLoginStatus =()=> {
     const userData = JSON.parse(localStorage.getItem('userData'));
     if (!userData || !userData.isLoggedIn) {
         window.location.href = 'login.html';

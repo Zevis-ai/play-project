@@ -1,5 +1,5 @@
-// בדיקת התחברות
-window.onload = function() {
+
+window.onload = ()=> {
     const userData = checkLoginStatus();
     if (!userData) {
         window.location.href = 'login.html';
@@ -14,7 +14,7 @@ let currentHighScore = 0;
 const diceSymbols = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 
 // טעינת שיא
-function loadHighScore() {
+const loadHighScore =()=> {
     const userData = JSON.parse(localStorage.getItem('userData'));
     if (userData) {
         const gameStats = JSON.parse(localStorage.getItem(`dice_game_stats_${userData.username}`) || '{"highScore": 0}');
@@ -24,7 +24,7 @@ function loadHighScore() {
 }
 
 // שמירת שיא חדש
-function saveHighScore() {
+const saveHighScore =()=> {
     const userData = JSON.parse(localStorage.getItem('userData'));
     if (userData && score > currentHighScore) {
         currentHighScore = score;
@@ -36,12 +36,12 @@ function saveHighScore() {
 }
 
 // הטלת קובייה
-function rollDie() {
+const rollDie =()=> {
     return Math.floor(Math.random() * 6) + 1;
 }
 
 // הצגת קובייה
-function displayDie(value, elementId) {
+const displayDie =(value, elementId)=> {
     const diceElement = document.getElementById(elementId);
     diceElement.textContent = diceSymbols[value - 1];
     diceElement.classList.add('rolling');
@@ -49,7 +49,7 @@ function displayDie(value, elementId) {
 }
 
 // הצגת הודעה
-function showMessage(message, type = '') {
+const showMessage =(message, type = '')=> {
     const messageElement = document.getElementById('message');
     messageElement.textContent = message;
     messageElement.className = 'message ' + type;
